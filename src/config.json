@@ -1,0 +1,9 @@
+{
+    "ip": "127.0.0.1",
+    "port": "8000",
+    "model": "InternVL3-8B",
+    "api_key": "token_1234567890",
+    "concurrency": 1200,
+    "timeout": 360,
+    "test_data_path": "./data/BMMR.tsv"
+}
