@@ -3,3 +3,5 @@ sympy
 pandas
 aiofiles
 xlsxwriter
+tqdm
+openpyxl

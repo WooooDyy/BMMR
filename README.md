@@ -1,18 +1,19 @@
 # BMMR Dataset
 
-[**🌐 Homepage**](https://bmmr.pages.dev/) | [**🏆 Leaderboard**](https://huggingface.co/spaces/guanyu615/BMMR_leaderboard) | [**🤗 BMMR**](https://huggingface.co/datasets/MMMU/MMMU/) | [**📖 BMMR arXiv**](https://arxiv.org/pdf/xxxxx.pdf) 
+[**🌐 Homepage**](https://bmmr.pages.dev/) | [**🏆 Leaderboard**](https://huggingface.co/spaces/guanyu615/BMMR_leaderboard) | [**🤗 BMMR**](https://huggingface.co/datasets/guanyu615/BMMR) | [**📖 BMMR arXiv**](https://arxiv.org/pdf/xxxxx.pdf) 
 
 This repo contains the evaluation code for the paper "[BMMR: A Large-Scale Bilingual Multimodal Multi-Discipline Reasoning Dataset](https://arxiv.org/abs/xxxxx)"
 
 
 ## 🔔News
 
-- **🔥[2025-06-26]: Our evaluation code has already been integrated into [VLMEvalKit](https://github.com/open-compass/VLMEvalKit). We welcome all submissions and look forward to your participation! 😆**
+- **🔥[2025-07-03]: We have released the evaluation scripts on GitHub, and we warmly welcome everyone to try them out! 👏**
+- **🔥[2025-07-03]: We have released the dataset on [HuggingFace](https://huggingface.co/datasets/guanyu615/BMMR)</b></a>! 🌟**
 
 ## Introduction
 
 We introduce BMMR, a large-scale bilingual, multimodal, multi-disciplinary reasoning dataset for the community to develop and evaluate large multimodal models (LMMs). BMMR comprises **110k** college-level questions spanning **300** UNESCO-defined subjects, spanning diverse formats—multiple-choice, fill-in-the-blank, and open-ended QA—and sourced from both print and digital media such as books, exams, and quizzes. All data are curated and filtered via a human-in-the-loop and scalable framework, and each instance is paired with a high-quality reasoning path. The dataset is organized into two parts: **BMMR-Eval** that comprises 20,458 high-quality instances to comprehensively assess LMMs’ knowledge and reasoning across multiple disciplines in both Chinese and English; and **BMMR-Train** that contains 88,991 instances to support further research and development, extending the current focus on mathematical reasoning to diverse disciplines and domains. In addition, we propose the process-based multi-discipline verifier (i.e., **BMMR-Verifier**) for accurate and fine-grained evaluation of reasoning paths. 
-Extensive experiments on $24$ models reveal that (i) even SOTA models (e.g., **o3** and **Gemini-2.5-Pro**) leave substantial headroom on BMMR-Eval; (ii) reasoning models exhibit discipline bias and outperform LMMs only on specific subjects; (iii) open-source models still trail their proprietary counterparts; and (iv) fine-tuning on BMMR-Train narrows this gap. Additionally, we conduct reasoning-chain analyses using **BMMR-Verifier** and other in-depth studies, uncovering the challenges LMMs currently face in multidisciplinary reasoning. We will release the data, and we hope our work can offers insights and contributions to the community.
+Extensive experiments on $24$ models reveal that (i) even SOTA models (e.g., o3 and Gemini-2.5-Pro) leave substantial headroom on BMMR-Eval; (ii) reasoning models exhibit discipline bias and outperform LMMs only on specific subjects; (iii) open-source models still trail their proprietary counterparts; and (iv) fine-tuning on BMMR-Train narrows this gap. Additionally, we conduct reasoning-chain analyses using BMMR-Verifier and other in-depth studies, uncovering the challenges LMMs currently face in multidisciplinary reasoning. We will release the data, and we hope our work can offers insights and contributions to the community.
 
 ![](images/overview_BMMR.png)
 

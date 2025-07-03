@@ -2,7 +2,46 @@ import re
 import json
 import pandas as pd
 from grade import math_equal
+import os
 
+# Add color output functions
+def print_colored(text, color="white"):
+    colors = {
+        "red": "\033[91m",
+        "green": "\033[92m",
+        "yellow": "\033[93m",
+        "blue": "\033[94m",
+        "magenta": "\033[95m",
+        "cyan": "\033[96m",
+        "white": "\033[97m",
+        "reset": "\033[0m"
+    }
+    print(f"{colors.get(color, colors['white'])}{text}{colors['reset']}")
+
+def print_separator(char="=", length=60):
+    print(char * length)
+
+def print_header(title):
+    print_separator()
+    print_colored(f"  {title}", "cyan")
+    print_separator()
+
+def print_results_table(rating_df):
+    print_colored("\n📊 Evaluation Results:", "cyan")
+    print_separator("-", 50)
+    
+    # Print header
+    columns = rating_df.columns.tolist()
+    header = " | ".join([f"{col:>10}" for col in columns])
+    print_colored(header, "white")
+    print_separator("-", len(header))
+    
+    # Print data
+    for index, row in rating_df.iterrows():
+        values = [f"{row[col]:>10.4f}" if isinstance(row[col], float) else f"{row[col]:>10}" for col in columns]
+        print(" | ".join(values))
+    
+    print_separator("-", 50)
 
 def dump(data, f):
 
@@ -236,10 +275,15 @@ def merge_rating(data):
 
 
 def evaluate(eval_file):
+    print_header("Starting Evaluation")
+    print_colored(f"📂 Evaluation file: {eval_file}", "blue")
+    
     refer_based_metrics_output_file = eval_file.replace('.jsonl', '_reference_based_metrics.jsonl')
 
     data = load_file(eval_file)
-    for d in data:
+    print_colored(f"📊 Loaded data count: {len(data)}", "green")
+
+    for i, d in enumerate(data):
         ref = d["answer"]
         cand = d["model_answer"]
         task_type = d["task_type"]
@@ -252,16 +296,23 @@ def evaluate(eval_file):
         d["acc"] = acc_score
 
     dump(data, refer_based_metrics_output_file)
-    rating = merge_rating(
-        data,
-    )
-    print(rating)
-    dump(rating, eval_file.replace('.jsonl', '_final_rating.xlsx'))
+    print_colored(f"💾 Detailed results saved: {refer_based_metrics_output_file}", "magenta")
+    
+    rating = merge_rating(data)
+    
+    print_results_table(rating)
+    
+    output_file = eval_file.replace('.jsonl', '_final_rating.xlsx')
+    dump(rating, output_file)
+    print_colored(f"📈 Evaluation report saved: {output_file}", "green")
+    
     return rating
 
 
 
 if __name__ == '__main__':
+    print_header("BMMR Evaluation System")
+    
     with open('./src/config.json', 'r') as f:
         config = json.load(f)
 
@@ -272,6 +323,17 @@ if __name__ == '__main__':
     model_name = model.split("/")[-1]
     eval_file = f"./output/{file_name}_{model_name}_greedy.jsonl"
     
-    print(f"Evaluating file: {eval_file}")
-    evaluate(eval_file)
-    print("Evaluation finished.")
+    print_colored(f"🔍 Target file: {eval_file}", "blue")
+    
+    if not os.path.exists(eval_file):
+        print_colored(f"❌ Error: File does not exist {eval_file}", "red")
+        print_colored("💡 Please run API evaluation first to generate result file", "yellow")
+        exit(1)
+    
+    try:
+        evaluate(eval_file)
+        print_header("Evaluation Completed")
+        print_colored("🎉 All evaluation tasks completed!", "green")
+    except Exception as e:
+        print_colored(f"❌ Error occurred during evaluation: {str(e)}", "red")
+        exit(1)
