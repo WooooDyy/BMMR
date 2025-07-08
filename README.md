@@ -7,8 +7,8 @@ This repo contains the evaluation code for the paper "[BMMR: A Large-Scale Bilin
 
 ## 🔔News
 
-- **🔥[2025-07-03]: We have released the evaluation scripts on GitHub, and we warmly welcome everyone to try them out! 👏**
-- **🔥[2025-07-03]: We have released the dataset on [HuggingFace](https://huggingface.co/datasets/guanyu615/BMMR)</b></a>! 🌟**
+- **🔥[2025-07-08]: We have released the evaluation scripts on GitHub, and we warmly welcome everyone to try them out! 👏**
+- **🔥[2025-07-08]: We have released the dataset on [HuggingFace](https://huggingface.co/datasets/guanyu615/BMMR)</b></a>! 🌟**
 
 ## Introduction
 
@@ -25,7 +25,8 @@ The evaluation set and training set of BMMR can be found in:
 
 ## Evaluation
 
-We have integrated our benchmark into the [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/tree/main) of OpenCompass. You can use VLMEvalKit for evaluation, or alternatively, use our evaluation script as described below:
+<!-- We have integrated our benchmark into the [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/tree/main) of OpenCompass. You can use VLMEvalKit for evaluation, or alternatively, use our evaluation script as described below: -->
+You can use the evaluation script as described below:
 
 ### Prepare
 
