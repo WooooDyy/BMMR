@@ -1,6 +1,6 @@
 # BMMR Dataset
 
-[**🌐 Homepage**](https://bmmr.pages.dev/) | [**🏆 Leaderboard**](https://huggingface.co/spaces/guanyu615/BMMR_leaderboard) | [**🤗 BMMR**](https://huggingface.co/datasets/guanyu615/BMMR) | [**📖 BMMR arXiv**](https://arxiv.org/pdf/xxxxx.pdf) 
+[**🌐 Homepage**](https://bmmr.pages.dev/) | [**🏆 Leaderboard**](https://huggingface.co/spaces/guanyu615/BMMR_leaderboard) | [**🤗 BMMR**](https://huggingface.co/datasets/guanyu615/BMMR) | [**📖 Paper**](http://arxiv.org/abs/2507.03483) 
 
 This repo contains the evaluation code for the paper "[BMMR: A Large-Scale Bilingual Multimodal Multi-Discipline Reasoning Dataset](https://arxiv.org/abs/xxxxx)"
 
@@ -57,7 +57,15 @@ bash src/eval.sh
 **BibTeX:**
 
 ```
-
+@misc{xi2025bmmrlargescalebilingualmultimodal,
+      title={BMMR: A Large-Scale Bilingual Multimodal Multi-Discipline Reasoning Dataset}, 
+      author={Zhiheng Xi and Guanyu Li and Yutao Fan and Honglin Guo and Yufang Liu and Xiaoran Fan and Jiaqi Liu and Jingchao Ding and Wangmeng Zuo and Zhenfei Yin and Lei Bai and Tao Ji and Tao Gui and Qi Zhang and Xuanjing Huang},
+      year={2025},
+      eprint={2507.03483},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2507.03483}, 
+}
 ```
 
 ## Acknowledgement
