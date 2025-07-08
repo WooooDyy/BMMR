@@ -1,8 +1,8 @@
 # BMMR Dataset
 
-[**🌐 Homepage**](https://bmmr.pages.dev/) | [**🏆 Leaderboard**](https://huggingface.co/spaces/guanyu615/BMMR_leaderboard) | [**🤗 BMMR**](https://huggingface.co/datasets/guanyu615/BMMR) | [**📖 Paper**](http://arxiv.org/abs/2507.03483) 
+[**🌐 Homepage**](https://bmmr.pages.dev/) | [**🏆 Leaderboard**](https://huggingface.co/spaces/guanyu615/BMMR_leaderboard) | [**🤗 BMMR**](https://huggingface.co/datasets/guanyu615/BMMR) | [**📖 Paper**](http://arxiv.org/abs/2507.03483)
 
-This repo contains the evaluation code for the paper "[BMMR: A Large-Scale Bilingual Multimodal Multi-Discipline Reasoning Dataset](https://arxiv.org/abs/xxxxx)"
+This repo contains the evaluation code for the paper "[BMMR: A Large-Scale Bilingual Multimodal Multi-Discipline Reasoning Dataset](http://arxiv.org/abs/2507.03483)"
 
 
 ## 🔔News
