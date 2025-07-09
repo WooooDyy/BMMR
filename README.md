@@ -25,8 +25,8 @@ The evaluation set and training set of BMMR can be found in:
 
 ## Evaluation
 
-<!-- We have integrated our benchmark into the [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/tree/main) of OpenCompass. You can use VLMEvalKit for evaluation, or alternatively, use our evaluation script as described below: -->
-You can use the evaluation script as described below:
+We have merged our benchmark into the [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/tree/main). You can use VLMEvalKit for evaluation, or alternatively, use our evaluation script as described below:
+
 
 ### Prepare
 
